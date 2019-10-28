@@ -1,0 +1,172 @@
+.profile {
+
+    margin-top:         100px;
+    background-color:   white;
+    border-radius:      10px;
+    position:           relative;
+    padding:            100px 20px 20px 20px;
+
+    .imgContainer {
+
+        text-align: center;
+        position:   absolute;
+        top:        -60px;
+        left:       0;
+        width:      100%;
+        margin:     0 auto;
+
+        img{
+
+            height:             140px;
+            padding:            20px;
+            display:            inline-block;
+            background-color:   #E8E8E8;
+            border:             10px solid white;
+            border-radius:      50%;
+
+        }
+
+    }
+
+    .staticInfo {
+
+        position: absolute;
+        top: 20px;
+
+        &.left {
+            left: 20px;
+        }
+
+        &.right {
+            right: 20px;
+        }
+
+    }
+
+    .multiPart {
+
+        p {
+
+            display:        inline-block;
+            margin-left:    20px;
+            text-align:     center;
+            font-size:      14px;
+            font-weight: bold;
+            color: #505050;
+
+            span {
+
+                display:    block;
+                font-size:  13px;
+                color: #989898;
+
+            }
+
+        }
+
+    }
+
+    .idNumber {
+
+        font-weight:    bold;
+        font-size:      24px;
+        color:          #989898;
+
+    }
+
+    .title {
+
+        font-size:      24px;
+        font-weight:    bold;
+        color:          #505050;
+
+    }
+
+    .infoContainer {
+
+        text-align: center;
+
+        table {
+
+            width: 50%;
+            margin: 20px auto;
+            box-sizing: border-box;
+            border-collapse: collapse;
+
+            thead {
+
+                th {
+
+                    text-align: left;
+
+                }
+
+            }
+
+            tbody {
+
+                td {
+
+                    text-align: left;
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    .profile {
+
+        text-align: center;
+
+        .staticInfo {
+
+            position:   relative;
+            top:        0;
+
+            &.right {
+
+                right: unset;
+
+            }
+
+            &.left {
+
+                left: unset;
+
+            }
+
+        }
+
+        .multiPart {
+
+            p {
+
+                margin: 10px 10px;
+
+            }
+
+        }
+
+        .infoContainer {
+
+            text-align: center;
+
+            table {
+
+                width: 100%;
+
+            }
+        }
+
+    }
+
+}

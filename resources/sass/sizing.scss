@@ -1,0 +1,16 @@
+.default-width-container {
+
+    margin:     0 auto;
+    width:      $df-width;
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .default-width-container {
+
+        width: 100%;
+
+    }
+
+}

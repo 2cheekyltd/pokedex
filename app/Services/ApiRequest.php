@@ -1,10 +1,19 @@
 <?php
 
-namespace Services\Api;
+/**
+ * API Request Controller
+ *
+ * @author     Jack Wright <mrjackwright@outlook.com>
+ * @copyright  2019 OpenGL License
+ * @version    Release: @package_version@
+ * @link       https://jackscv.co.uk/
+ */
+
+namespace App\Services;
 
 use GuzzleHttp\{Client, Psr7, Exception\RequestException};
 
-class Request
+class ApiRequest
 {
     private const DEFAULT_METHOD_TYPE = 'GET';
     private $url;
@@ -23,9 +32,9 @@ class Request
 
     /**
      * @param string $url
-     * @return Request
+     * @return ApiRequest
      */
-    public function setUrl(string $url): Request
+    public function setUrl(string $url): ApiRequest
     {
         $this->url = $url;
         return $this;
@@ -33,9 +42,9 @@ class Request
 
     /**
      * @param float $timeout
-     * @return Request
+     * @return ApiRequest
      */
-    public function setTimeout(float $timeout): Request
+    public function setTimeout(float $timeout): ApiRequest
     {
         $this->options['timeout'] = $timeout;
         return $this;
@@ -43,9 +52,9 @@ class Request
 
     /**
      * @param bool $value
-     * @return Request
+     * @return ApiRequest
      */
-    public function setErrorReporting(bool $value): Request
+    public function setErrorReporting(bool $value): ApiRequest
     {
         $this->options['http_errors'] = $value;
         return $this;
@@ -53,9 +62,9 @@ class Request
 
     /**
      * @param array $headers
-     * @return Request
+     * @return ApiRequest
      */
-    public function setHeaders(array $headers): Request
+    public function setHeaders(array $headers): ApiRequest
     {
         $this->options['headers'] = $headers;
         return $this;
@@ -63,9 +72,9 @@ class Request
 
     /**
      * @param string $method
-     * @return Request
+     * @return ApiRequest
      */
-    public function setMethod(string $method = self::DEFAULT_METHOD_TYPE): Request
+    public function setMethod(string $method = self::DEFAULT_METHOD_TYPE): ApiRequest
     {
         $this->method = $method;
         return $this;
@@ -73,9 +82,9 @@ class Request
 
     /**
      * @param bool $value
-     * @return Request
+     * @return ApiRequest
      */
-    public function setRedirectAllowance(bool $value): Request
+    public function setRedirectAllowance(bool $value): ApiRequest
     {
         $this->options['allow_redirects'] = $value;
         return $this;

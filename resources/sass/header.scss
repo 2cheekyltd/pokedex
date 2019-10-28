@@ -1,0 +1,21 @@
+header {
+
+    background-color: $black;
+    padding: 15px;
+
+    > .row .col-2 {
+        text-align: right;
+    }
+
+    a {
+        display: inline-block;
+        img {
+            width: 200px;
+        }
+
+        i {
+            font-size: 24px;
+            color: white;
+        }
+    }
+}

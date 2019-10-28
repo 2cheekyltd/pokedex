@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Pretty much what it says on the tin...
+ *
+ * @author     Jack Wright <mrjackwright@outlook.com>
+ * @copyright  2019 OpenGL License
+ * @version    Release: @package_version@
+ * @link       https://jackscv.co.uk/
+ */
+
 namespace Services;
 
 class UrlBuilder

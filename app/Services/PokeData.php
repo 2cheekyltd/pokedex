@@ -1,10 +1,22 @@
 <?php
-namespace Services;
-use Services/ApiRequest as Api;
+
+namespace App\Services;
+
+/**
+ * Pokemon Data Manager
+ *
+ * @author     Jack Wright <mrjackwright@outlook.com>
+ * @copyright  2019 OpenGL License
+ * @version    Release: @package_version@
+ * @link       https://jackscv.co.uk/
+ */
+
+use App\Services\ApiRequest as Api;
+
 class PokeData
 {
-    private resultSet = [];
-    private singleResult = [];
+    private $resultSet         = [];
+    private $singleResults = [];
 
     /**
      * @param String $url

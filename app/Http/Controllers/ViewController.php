@@ -1,10 +1,21 @@
 <?php
 
+/**
+ * View controller. Basically does everything short of the washing.
+ *
+ * @author     Jack Wright <mrjackwright@outlook.com>
+ * @copyright  2019 OpenGL License
+ * @version    Release: @package_version@
+ * @link       https://jackscv.co.uk/
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Services\PokeData;
+
+use App\Services\{PokeData, UrlBuilder};
+
 
 class ViewController extends Controller
 {
@@ -104,7 +115,7 @@ class ViewController extends Controller
         $data = (new PokeData)
             ->getResultSet($url)
             ->gatherIndividualDataFromResults();
-        return view('includes.resultSort', ['data' => $data])->render();
+        return view('includes.results', ['data' => $data])->render();
     }
 
     public function singular(string $name)
